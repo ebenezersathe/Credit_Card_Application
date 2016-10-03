@@ -72,19 +72,6 @@ Step 5: (For Java Programmers) Install MySQL JDBC Driver
 Download the latest JDBC driver from http://www.mysql.com/downloads ⇒ MySQL Connectors ⇒ Connector/J ⇒ Compressed TAR archive (e.g., mysql-connector-java-{5.x.xx}.tar.gz,   where {5.x.xx} is the latest release number).  
 Double-click on the downloaded TAR file to expand into folder "mysql-connector-java-{5.x.xx}".  
 Open the expanded folder. Copy the JAR file "mysql-connector-java-{5.x.xx}-bin.jar" to JDK's extension directory at "/Library/Java/Extension".  
-6.2  How to Uninstall and Remove MySQL 5  
-Open a Terminal ⇒ Run the "nano" editor to edit /etc/hostconfig, as follows:  
-sudo nano /etc/hostconfig  
-Enter your password: ....  
-Delete this line if present: "MYSQLCOM=-YES-". Press cntl-x to exit "nano" and enter "Y" to save the file. The line "MYSQLCOM=-YES-" starts MySQL automatically during startup.  
-Make sure that MySQL is not running (Open the "Activity Monitor" under the "Applications/Utilities", and check for the process "mysqld"). Open a Terminal and issue "rm -r" to remove these directories and their sub-directories (with "f" indicating no confirmation prompt).  
-sudo rm /usr/local/mysql  
-sudo rm -rf /usr/local/mysql*  
-sudo rm -rf /Library/StartupItems/MySQLCOM  
-sudo rm -rf /Library/PreferencePanes/My*  
-sudo rm -rf /Library/Receipts/mysql*  
-sudo rm -rf /Library/Receipts/MySQL*  
-sudo rm /etc/my.cnf  
 
 
 #To install Apache Tomcat
