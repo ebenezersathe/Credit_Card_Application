@@ -29,7 +29,7 @@ To install Eclipse:
 To install MySQL:
 * The default TCP port number used by MySQL Server is 3306.
 * [For novices: SKIP THIS STEP to run the MySQL Server on port 3306. Goto Step 3.]
-* You can change the port number by editing the configuration file "my.cnf" at directory "/usr/local/mysql".
+* You can change the port number by editing the configuration file "my.cnf" at directory "/usr/local/mysql".  
 > ##[mysqld]
 > .....
 > port=8888
