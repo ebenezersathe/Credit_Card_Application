@@ -1,0 +1,80 @@
+<div ng-controller="registrationController" class="generic-container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<span class="lead">User Registration Form </span>
+		</div>
+		<div class="formcontainer">
+			<form name="myForm" ng-model="myForm"
+				class="form-horizontal ng-pristine">
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="uname">Name</label>
+						<div class="col-md-7">
+							<input ng-model="user.name" id="uname"
+								class="username form-control input-sm ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-touched"
+								placeholder="Enter your name" required="" ng-minlength="3"
+								type="text">
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="address">Address</label>
+						<div class="col-md-7">
+							<input ng-model="user.address" id="address"
+								class="form-control input-sm ng-pristine ng-untouched ng-valid"
+								placeholder="Enter your Address. [This field is validation free]"
+								type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="email">DOB</label>
+						<div class="col-md-7">
+							<input ng-model="user.dob" id="dob"
+								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+								placeholder="Enter your DOB"  type="text"></input>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="email">Annual
+							Income</label>
+						<div class="col-md-7">
+							<input ng-model="user.annualIncome" id="annualIncome"
+								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+								placeholder="Enter your Annual Income" type="text">
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="email">SSN</label>
+						<div class="col-md-7">
+							<input ng-model="user.ssn" id="ssn"
+								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+								placeholder="Enter your SSN" type="text">
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-actions pull-right">
+						<input value="Submit" class="btn btn-primary btn-sm" type="button"
+							ng-click="saveData()">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
