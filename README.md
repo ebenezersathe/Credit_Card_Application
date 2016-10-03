@@ -9,10 +9,10 @@ These instructions will get you a copy of the project up and running on your loc
 Prerequisities
 
 To Run this Software on your local machine
-1. Install Eclipse on your local machine (Please refer https://eclipse.org/downloads/)
-2. Install Apache Tomcat 7.0 (please refer https://tomcat.apache.org/download-70.cgi)
-3. Install Maven plugin in eclipse (Download from Eclipse Market Place)
-4. Install MySql 5.6 locally (Please refer - http://dev.mysql.com/doc/refman/5.6/en/macosx-installation.html)
+1. Install Eclipse on your local machine (Please refer https://eclipse.org/downloads/)  
+2. Install Apache Tomcat 7.0 (please refer https://tomcat.apache.org/download-70.cgi)  
+3. Install Maven plugin in eclipse (Download from Eclipse Market Place)  
+4. Install MySql 5.6 locally (Please refer - http://dev.mysql.com/doc/refman/5.6/en/macosx-installation.html)  
 
 Give examples
 Installing
