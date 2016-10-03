@@ -19,11 +19,11 @@ To Run this Software on your local machine
 A step by step series of examples that tell you have to get a development env running
 
 To install Eclipse:
-Download Eclipse from http://www.eclipse.org/downloads/. Choose "Mac OS X" ⇒ "Eclipse IDE for Java Developers" (or "Eclipse Classic"). You will receive a TAR file (e.g., "eclipse-java-juno-SR1-macosx-cocoa-x86_64.tar.gz") in "~/Downloads" folder.  
-Double-click the downloaded TAR file to expand it into an folder called "eclipse".  
-Drag the expanded "eclipse" folder to the "Applications" folder.  
-To start Eclipse, open the "eclipse" folder and click on the "Eclipse" icon. You may drag the "Eclipse" icon to the dock.  
-Notes: To uninstall Eclipse, drag the "/Applications/eclipse" folder to trash.  
+* Download Eclipse from http://www.eclipse.org/downloads/. Choose "Mac OS X" ⇒ "Eclipse IDE for Java Developers" (or "Eclipse Classic"). You will receive a TAR file (e.g., "eclipse-java-juno-SR1-macosx-cocoa-x86_64.tar.gz") in "~/Downloads" folder.  
+* Double-click the downloaded TAR file to expand it into an folder called "eclipse".  
+* Drag the expanded "eclipse" folder to the "Applications" folder.  
+* To start Eclipse, open the "eclipse" folder and click on the "Eclipse" icon. You may drag the "Eclipse" icon to the dock.  
+* Notes: To uninstall Eclipse, drag the "/Applications/eclipse" folder to trash.  
 
 To install MySQL
 The default TCP port number used by MySQL Server is 3306.
