@@ -86,21 +86,20 @@ sudo rm -rf /Library/Receipts/MySQL*
 sudo rm /etc/my.cnf
 
 
-To install Apache Tomcat
-Here are the easy to follow steps to get it up and running on your Mac
-Download a binary distribution of the core module: apache-tomcat-7.0.47.tar.gz from here. I picked the tar.gz in Binary Distributions / Core section.
-Opening/unarchiving the archive will create a folder structure in your Downloads folder: (btw, this free Unarchiver app is perfect for all kinds of compressed files and superior to the built-in Archive Utility.app)
-~/Downloads/apache-tomcat-7.0.47
-Open to Terminal app to move the unarchived distribution to /usr/local
-sudo mkdir -p /usr/local
-sudo mv ~/Downloads/apache-tomcat-7.0.47 /usr/local
-To make it easy to replace this release with future releases, we are going to create a symbolic link that we are going to use when referring to Tomcat (after removing the old link, you might have from installing a previous version):
-sudo rm -f /Library/Tomcat
-sudo ln -s /usr/local/apache-tomcat-7.0.47 /Library/Tomcat
-Change ownership of the /Library/Tomcat folder hierarchy:
-sudo chown -R <your_username> /Library/Tomcat
-Make all scripts executable:
-sudo chmod +x /Library/Tomcat/bin/*.sh
+#To install Apache Tomcat
+1. Here are the easy to follow steps to get it up and running on your Mac  
+2. Download a binary distribution of the core module: apache-tomcat-7.0.47.tar.gz from here. I picked the tar.gz in Binary Distributions / Core section.
+3. Opening/unarchiving the archive will create a folder structure in your Downloads folder: (btw, this free Unarchiver app is perfect for all kinds of compressed files and  superior to the built-in Archive Utility.app)~/Downloads/apache-tomcat-7.0.47  
+3. Open to Terminal app to move the unarchived distribution to /usr/local  
+4. sudo mkdir -p /usr/local  
+5. sudo mv ~/Downloads/apache-tomcat-7.0.47 /usr/local  
+6. To make it easy to replace this release with future releases, we are going to create a symbolic link that we are going to use when referring to Tomcat (after removing the old link, you might have from installing a previous version):  
+7. sudo rm -f /Library/Tomcat  
+8. sudo ln -s /usr/local/apache-tomcat-7.0.47 /Library/Tomcat  
+9. Change ownership of the /Library/Tomcat folder hierarchy:  
+10. sudo chown -R <your_username> /Library/Tomcat  
+11. Make all scripts executable:  
+12 .sudo chmod +x /Library/Tomcat/bin/*.sh  
 
 
 Running the tests
