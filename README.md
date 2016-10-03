@@ -35,21 +35,21 @@ To install MySQL:
 > port=8888
 > 
 
-[client]
+#####[client]
 port=8888
-To create this file, open a new "Terminal" and run the "nano" editor using this command:
-sudo nano /usr/local/mysql/my.cnf
-Modify the lines in green and add in the lines in red; and press ctrl-X to exit. (We use the "nano" editor in this case, you can use any text editor, but run in superuser.)
-Notes: On Unix/Mac, the MySQL read the options file in this order: "/etc/my.cnf", "SYSCONFDIR/mf.cnf", "$MYSQL_HOME/my.cnf", "~/.my.cnf".
-Step 3: Start/Shutdown the MySQL Server
-Open a new "Terminal" and issue these commands to start the MySQL server:
-$ cd /usr/local/mysql/bin
-$ sudo ./mysqld_safe --console
-Enter your password: 
-xxxxxx xx:xx:xx mysql_safe logging to '/usr/local/mysql/data/xxxxxx.err'
-xxxxxx xx:xx:xx mysql_safe Starting mysqld daemon with databases from /usr/local/mysql/data
-To shutdown the server, start a new terminal and issue:
-$ cd /usr/local/mysql/bin
+To create this file, open a new "Terminal" and run the "nano" editor using this command:  
+* sudo nano /usr/local/mysql/my.cnf  
+* Modify the lines in green and add in the lines in red; and press ctrl-X to exit. (We use the "nano" editor in this case, you can use any text editor, but run in superuser.)  
+* Notes: On Unix/Mac, the MySQL read the options file in this order: "/etc/my.cnf", "SYSCONFDIR/mf.cnf", "$MYSQL_HOME/my.cnf", "~/.my.cnf".  
+* Step 3: Start/Shutdown the MySQL Server  
+* Open a new "Terminal" and issue these commands to start the MySQL server:  
+* $ cd /usr/local/mysql/bin  
+* $ sudo ./mysqld_safe --console  
+* Enter your password:  
+* xxxxxx xx:xx:xx mysql_safe logging to '/usr/local/mysql/data/xxxxxx.err'  
+* xxxxxx xx:xx:xx mysql_safe Starting mysqld daemon with databases from /usr/local/mysql/data  
+* To shutdown the server, start a new terminal and issue:  
+* $ cd /usr/local/mysql/bin  
  
 $ sudo ./mysqladmin -u root shutdown     // BEFORE you set a password for root
 // OR
