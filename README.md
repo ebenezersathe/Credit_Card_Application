@@ -49,24 +49,24 @@ To create this file, open a new "Terminal" and run the "nano" editor using this 
 * xxxxxx xx:xx:xx mysql_safe logging to '/usr/local/mysql/data/xxxxxx.err'  
 * xxxxxx xx:xx:xx mysql_safe Starting mysqld daemon with databases from /usr/local/mysql/data  
 * To shutdown the server, start a new terminal and issue:  
+* $ cd /usr/local/mysql/bin   
+* $ sudo ./mysqladmin -u root shutdown     // BEFORE you set a password for root  
+* // OR  
+* $ sudo ./mysqladmin -u root -p shutdown  // AFTER you set a password for root  
+* Step 4: Start/Stop a MySQL Client  
+* Open a new "Terminal" and issue this command to start a MySQL client with superuser root:  
 * $ cd /usr/local/mysql/bin  
- 
-$ sudo ./mysqladmin -u root shutdown     // BEFORE you set a password for root
-// OR
-$ sudo ./mysqladmin -u root -p shutdown  // AFTER you set a password for root
-Step 4: Start/Stop a MySQL Client
-Open a new "Terminal" and issue this command to start a MySQL client with superuser root:
-$ cd /usr/local/mysql/bin
- 
-$ ./mysql -u root      // BEFORE you set a password for root
-// OR
-$ ./mysql -u root -p   // AFTER you set a password for root
-To terminate the client, issue command "exit" (or "quit") from the "mysql>" prompt:
-mysql> exit
-Notes:
-You can use "Activity Monitor" (under Applications/Utilities) to check if the MySQL Server is running. Look for process starting with mysqld.
-The log messages are written to /usr/local/mysql/data/xxx.err, where xxx denotes your machine name. Issue "sudo cat /usr/local/mysql/data/xxx.err" to view the messages.
-If you get the following error message when starting a client: "Can't connect to local MySQL server through socket '....', check your "Activity Monitor" to see if the MySQL server has been started.
+* $ ./mysql -u root      // BEFORE you set a password for root  
+* // OR  
+* $ ./mysql -u root -p   // AFTER you set a password for root  
+* To terminate the client, issue command "exit" (or "quit") from the "mysql>" prompt:  
+* mysql> exit  
+
+######Notes:
+> You can use "Activity Monitor" (under Applications/Utilities) to check if the MySQL Server is running. Look for process starting with mysqld.  
+> The log messages are written to /usr/local/mysql/data/xxx.err, where xxx denotes your machine name. Issue "sudo cat /usr/local/mysql/data/xxx.err" to view the messages.  
+> If you get the following error message when starting a client: "Can't connect to local MySQL server through socket '....', check your "Activity Monitor" to see if the MySQL  
+> server has been started.
 Step 5: (For Java Programmers) Install MySQL JDBC Driver
 Download the latest JDBC driver from http://www.mysql.com/downloads ⇒ MySQL Connectors ⇒ Connector/J ⇒ Compressed TAR archive (e.g., mysql-connector-java-{5.x.xx}.tar.gz, where {5.x.xx} is the latest release number).
 Double-click on the downloaded TAR file to expand into folder "mysql-connector-java-{5.x.xx}".
