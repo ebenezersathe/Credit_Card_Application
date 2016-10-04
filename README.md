@@ -89,11 +89,3 @@ Open the expanded folder. Copy the JAR file "mysql-connector-java-{5.x.xx}-bin.j
 11. Make all scripts executable:  
 12 .sudo chmod +x /Library/Tomcat/bin/*.sh  
 
-
-Running the tests
-
-
-
-
-Explain what these tests test and why
-
