@@ -4,17 +4,15 @@
 			<span class="lead">User Registration Form </span>
 		</div>
 		<div class="formcontainer">
-			<form name="myForm" ng-model="myForm"
+			<form id="myForm" ng-model="myForm"
 				class="form-horizontal ng-pristine">
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class="col-md-2 control-lable" for="uname">Name</label>
-						<div class="col-md-7">
-							<input ng-model="user.name" id="uname"
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+							<input type = "text" ng-model="user.name" id="uname"
 								class="username form-control input-sm ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-touched"
-								placeholder="Enter your name" required="" ng-minlength="3"
-								type="text">
-
+								placeholder="Enter your name" ng-minlength="3" required> 
 						</div>
 					</div>
 				</div>
@@ -23,7 +21,7 @@
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class="col-md-2 control-lable" for="address">Address</label>
-						<div class="col-md-7">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 							<input ng-model="user.address" id="address"
 								class="form-control input-sm ng-pristine ng-untouched ng-valid"
 								placeholder="Enter your Address. [This field is validation free]"
@@ -35,10 +33,10 @@
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class="col-md-2 control-lable" for="email">DOB</label>
-						<div class="col-md-7">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 							<input ng-model="user.dob" id="dob"
 								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
-								placeholder="Enter your DOB"  type="text"></input>
+								placeholder="Enter your DOB"  type="date"></input>
 						</div>
 					</div>
 				</div>
@@ -47,7 +45,7 @@
 					<div class="form-group col-md-12">
 						<label class="col-md-2 control-lable" for="email">Annual
 							Income</label>
-						<div class="col-md-7">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 							<input ng-model="user.annualIncome" id="annualIncome"
 								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
 								placeholder="Enter your Annual Income" type="text">
@@ -59,19 +57,23 @@
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class="col-md-2 control-lable" for="email">SSN</label>
-						<div class="col-md-7">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 							<input ng-model="user.ssn" id="ssn"
 								class="email form-control input-sm ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
-								placeholder="Enter your SSN" type="text">
+								placeholder="Enter your SSN" type="text" pattern="[0-9]{10}">
 
 						</div>
 					</div>
 				</div>
 
+				
 				<div class="row">
+				<div class="form-actions pull-left">
+							<a href="#/"><input value="Back" class="btn btn-primary btn-sm" type="button"/></a>
+					</div>
 					<div class="form-actions pull-right">
 						<input value="Submit" class="btn btn-primary btn-sm" type="button"
-							ng-click="saveData()">
+							ng-click="saveData()" ng-disabled="form-horizontal.$invalid">
 					</div>
 				</div>
 			</form>

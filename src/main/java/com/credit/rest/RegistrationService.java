@@ -1,4 +1,4 @@
-package com.credit.services;
+package com.credit.rest;
 
 /**
  * The service is used to get the data of the 
@@ -18,12 +18,17 @@ import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+
+
 
 import com.credit.model.RegisteredCustomer;
+import com.credit.service.UserService;
+import com.credit.service.UserServiceImpl;
 
 @Path("/register")
 public class RegistrationService {
+	
+	UserService service=new UserServiceImpl();
 	/**
 	 * Method use to get the List of the Customer
 	 * who are already registered.
@@ -33,25 +38,7 @@ public class RegistrationService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getRegisteredCustomerList() {
-		RegisteredCustomer c1 = new RegisteredCustomer();
-		c1.setName("saurabh");
-		c1.setAddress("glasgow");
-		c1.setDob("25/02/1991");
-		c1.setAnnualIncome(10000);
-		c1.setSsn(1234);
-
-		RegisteredCustomer c2 = new RegisteredCustomer();
-		c2.setName("ebe");
-		c2.setAddress("glasgow");
-		c2.setDob("25/02/1991");
-		c2.setAnnualIncome(10000);
-		c2.setSsn(1234);
-
-		List<RegisteredCustomer> list = new ArrayList<RegisteredCustomer>();
-		list.add(c1);
-		list.add(c2);
-
-		GenericEntity<List<RegisteredCustomer>> entity = new GenericEntity<List<RegisteredCustomer>>(list) {
+		GenericEntity<List<RegisteredCustomer>> entity = new GenericEntity<List<RegisteredCustomer>>(service.getResgisteredCustomer()) {
 		};
 		return Response.ok(entity).build();
 	}
@@ -62,9 +49,7 @@ public class RegistrationService {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void saveRegisteredCustomer(RegisteredCustomer registeredCustomer) {
-
-		System.out.println(registeredCustomer);
-
+		service.saveDetails(registeredCustomer);
 	}
 
 }

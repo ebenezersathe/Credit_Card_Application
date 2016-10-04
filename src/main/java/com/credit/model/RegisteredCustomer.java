@@ -1,9 +1,15 @@
 package com.credit.model;
 
+import java.sql.Date;
+
+
+
+
+
 public class RegisteredCustomer {
 	private String name;
 	private String address;
-	private String dob;
+	private Date dob;
 	private int ssn;
 	private double annualIncome;
 	/**
@@ -33,13 +39,13 @@ public class RegisteredCustomer {
 	/**
 	 * @return the dob
 	 */
-	public String getDob() {
+	public Date getDob() {
 		return dob;
 	}
 	/**
 	 * @param dob the dob to set
 	 */
-	public void setDob(String dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 	/**

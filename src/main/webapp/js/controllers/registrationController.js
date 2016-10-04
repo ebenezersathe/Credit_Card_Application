@@ -7,21 +7,10 @@ app.controller('registrationController', [
 		'$http',
 		function($scope, $http) {
 			/**
-			 * The below is function is called on the page load to attached the
-			 * datepicker to the html element.
-			 */
-			/*$(function() {
-				$('#dob').datetimepicker({
-					format : 'DD/MM/YYYY'
-				});
-			});*/
-			
-			/**
 			 * Function will be called to save the data to database.
 			 * 
 			 */
 			$scope.saveData = function() {
-				//S$scope.user.dob=
 				/**
 				 * Below url with the type as post used to save the data to the
 				 * database.
@@ -34,5 +23,14 @@ app.controller('registrationController', [
 				$http.post(url, JSON.stringify($scope.user)).success(
 						function(response) {
 						});
+				
+				myFunction();
+			}
+			
+			function myFunction() {
+			    document.getElementById("myForm").reset();
+			}
+			function goBack() {
+			    window.history.back();
 			}
 		} ]);
